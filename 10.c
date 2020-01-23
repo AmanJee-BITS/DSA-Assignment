@@ -3,7 +3,7 @@
 #include <math.h>
 #include <string.h>
 
-int int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
 	long long int n;
 	scanf("%lld", &n);
