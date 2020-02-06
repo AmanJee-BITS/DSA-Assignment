@@ -71,8 +71,7 @@ void merge_sort(int l, int h) {
 }
 
 int main() {
-
-
+	
   #ifndef ONLINE_JUDGE
   freopen("input.txt","r",stdin);
   freopen("output.txt","w",stdout);
@@ -107,4 +106,5 @@ int main() {
 		}
 	}
 	printf("\n");
+	return 0;
 }
