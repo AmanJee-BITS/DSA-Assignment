@@ -36,17 +36,21 @@ int main() {
     		}
     		stack[++i] = a;
     		
-    		stack = (int *)realloc(stack, i+2); 
+    		stack = realloc(stack, i+2); 
     	}
     	else if(s[1] == 'o') {
-    		if(stack[i] < minEle) {
-    			printf("OK poped %d\n", minEle);
-    			minEle = 2*minEle - stack[i--];
-    		}
-    		else
-    			printf("OK poped %d\n", stack[i--]);
+            if(i == -1)
+                printf("STACK UNDERFLOW");
+            else {
+        		if(stack[i] < minEle) {
+        			printf("OK poped %d\n", minEle);
+        			minEle = 2*minEle - stack[i--];
+        		}
+        		else
+        			printf("OK poped %d\n", stack[i--]);
 
-    		stack = (int*)realloc(stack, i+2);
+        		stack = realloc(stack, i+2);
+            }
     	}
     	else if(s[2] == 'e') {
     		printf("%d\n", stack[i]);
